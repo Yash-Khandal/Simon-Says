@@ -1,0 +1,85 @@
+/* Gradient background animation */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    text-align: center;
+    color: white;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Button container */
+.btn-container {
+    display: flex;
+    flex-direction: column; /* Stack lines vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Each line of buttons */
+.line-one, .line-two {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}
+
+/* Button styles */
+.btn {
+    height: 200px;
+    width: 200px;
+    border-radius: 20%;
+    border: 10px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Add glow effect on hover */
+}
+
+/* Button colors */
+.yellow {
+    background-color: yellow;
+}
+
+.violet {
+    background-color: violet;
+}
+
+.green {
+    background-color: green;
+}
+
+.aqua {
+    background-color: aqua;
+}
+
+/* Flash effect (for game sequence) */
+.flash {
+    background-color: white !important; /* Override button color */
+    opacity: 0.8;
+    transition: background-color 0.2s ease; /* Smooth transition */
+}
+
+/* Black effect (for user clicks) */
+.black {
+    background-color: black !important; /* Override button color */
+    opacity: 0.8;
+    transition: background-color 0.2s ease; /* Smooth transition */
+}
